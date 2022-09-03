@@ -8,3 +8,45 @@ h1{
 .not{
     text-decoration: underline;
 }
+
+
+.countdown{
+    background-color: white;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    
+}
+.countdownTimer{
+    font-size: x-large;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.sessionCount{
+    width: fit-content;
+    font-size: large;
+    border-radius: 8px;
+    background-color: black;
+    padding: 1rem;
+    color: white;
+}
+
+.sessionCountTitle{
+  
+    border-radius: 8px;
+    background-color: white;
+    padding: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+
+.timerContainer{
+    font-size: x-large;
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+     
+}
