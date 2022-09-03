@@ -13,7 +13,7 @@ module.exports = {
     },
     createTodo: async (req, res)=>{
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id})
+            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id, sessionCount: '0'})
             console.log('Todo has been added!')
             res.redirect('/todos')
         }catch(err){
@@ -23,7 +23,8 @@ module.exports = {
     markComplete: async (req, res)=>{
         try{
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                completed: true
+                completed: true,
+                sessionCount: req.body.sessionCountFromJSFile
             })
             console.log('Marked Complete')
             res.json('Marked Complete')
